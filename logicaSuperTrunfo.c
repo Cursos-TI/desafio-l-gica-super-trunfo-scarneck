@@ -31,6 +31,7 @@ int main() {
    
     printf("*** Super Trunfo ***\n\n");
 
+
     //Primeira carta
     printf("** Primeira carta** \n\n");
     printf("Insira a letra do primeiro estado: \n");
@@ -92,53 +93,82 @@ int main() {
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-    printf("\n_________________________________\n");
-    printf("Resultado: \n");
-    if (pop > pop2) {
-         printf("Cidade 1 tem a maior população.\n");
-    } else {
-         printf("Cidade 2 tem a maior população.\n");
-    }
-    if (area > area2) {
-        printf("Cidade 1 tem a maior área.\n");
-    } else {
-        printf("Cidade 2 tem a maior área.\n");
-    }
-    if (pib > pib2) {
-        printf("Cidade 1 tem o maior PIB.\n");
-    } else {
-        printf("Cidade 2 tem o maior PIB\n");
-    }
-    if (pibpc > pibpc2) {
-        printf("Cidade 1 tem o maior PIB per capita.\n");
-    } else {
-        printf("Cidade 2 tem o maior PIB per capita.\n");
-    }     
-    if (pt > pt2) {
-        printf("Cidade 1 tem mais pontos turísticos.\n");
-    } else {
-        printf("Cidade 2 tem mais pontos turísticos.\n");
-    }
-    if (dp < dp2) {
-        printf("Cidade 1 tem a melhor densidade poulacional.\n");
-    } else {
-        printf("Cidade 2 tem a melhor densidade poulacional.\n");
-    }
-    if (SP > SP2) {
-        printf("Cidade 1 tem o maior SuperPoder.\n");
-    } else {
-        printf("Cidade 2 tem o maior SuperPoder.\n");
-    }
-    // Exibição dos Resultados:
+
+        // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n");
-    if (SP > SP2) {
-        printf("Cidade %s é a vencedora por ter o maior SuperPoder.\n",name);
+
+    int opt;
+    printf("Escolha o método de comparação\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - PIB per capita\n");
+    printf("5 - Densidade populacional\n");
+    printf("6 - Quantidade de pontos Turísticos\n");
+    printf("7 - SuperPoder\n");
+
+    scanf("%d",&opt);
+    printf("\n_________________________________\n");
+    printf("Resultado: \n");
+    switch (opt)
+    {
+    case 1:
+        if (pop > pop2) {
+         printf("Cidade 1 tem a maior população,Logo é a vencedora.\n");
     } else {
-        printf("Cidade %s é a vencedora por ter o maior SuperPoder.\n",name2);
+         printf("Cidade 2 tem a maior população.\n");
+    }break;
+
+    case 2:
+        if (area > area2) {
+        printf("Cidade 1 tem a maior área.\n");
+    } else {
+        printf("Cidade 2 tem a maior área.\n");
+    }break;
+
+    case 3:
+        if (pib > pib2) {
+        printf("Cidade 1 tem o maior PIB.\n");
+    } else {
+        printf("Cidade 2 tem o maior PIB\n");
+    }break;
+
+    case 4:
+        if (pibpc > pibpc2) {
+        printf("Cidade 1 tem o maior PIB per capita.\n");
+    } else {
+        printf("Cidade 2 tem o maior PIB per capita.\n");
+    }break;
+
+    case 5:
+        if (dp < dp2) {
+        printf("Cidade 1 tem a melhor densidade poulacional.\n");
+    } else {
+        printf("Cidade 2 tem a melhor densidade poulacional.\n");
+    }break;
+
+    case 6:
+        if (pt > pt2) {
+        printf("Cidade 1 tem mais pontos turísticos.\n");
+    } else {
+        printf("Cidade 2 tem mais pontos turísticos.\n");
+    }break;
+
+    
+    case 7:
+        if (SP > SP2) {
+        printf("Cidade 1 tem o maior SuperPoder.\n");
+    } else {
+        printf("Cidade 2 tem o maior SuperPoder.\n");
+    }break;
+
+    default:
+        printf("Algo inesperado ocorreu, tente novamente.\n");
+        break;
     }
 
 
